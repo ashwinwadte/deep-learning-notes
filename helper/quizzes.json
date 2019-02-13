@@ -1,0 +1,169 @@
+{
+  "quizzes": [
+    {
+        "id": 0,
+        "name": "quiz_name",
+        "question": "quiz_question",
+        "choices": [
+        {
+            "choice0": 1
+        },
+        {
+            "choice1": 1
+        },
+        {
+            "choice2": 0
+        },
+        {
+            "choice3": 0
+        }
+        ]
+    },
+    {
+        "id": 1,
+        "name": "conditions_for_gradient_descent",
+        "question": "Which of the following conditions should be met in order to apply gradient descent? (Check all that apply.)",
+        "choices": [
+        {
+            "The error function should be discrete": 0
+        },
+        {
+            "The error function should contain only positive values": 0
+        },
+        {
+            "The error function should be differentiable": 1
+        },
+        {
+            "The error function should be normalized": 0
+        },
+        {
+            "The error function should be continuous": 1
+        }
+      ]
+    },
+    {
+        "id": 2,
+        "name": "perceptron_boundry",
+        "question": "The sigmoid function is defined as $sigmoid(x) = \\frac{1}{(1+e^{-x})}$. If the score is defined by $4x_1 + 5x_2 - 9 = score$, then which of the following points has exactly a 50% probability of being blue or red? (Choose all that are correct.)",
+        "choices": [
+        {
+            "(1, 1)": 1
+        },
+        {
+            "(2, 4)": 0
+        },
+        {
+            "(5, -5)": 0
+        },
+        {
+            "(-4, 5)": 1
+        }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "convert_number_to_positive",
+        "question": "What function turns every number into a positive number?",
+        "choices": [
+        {
+            "sin": 0
+        },
+        {
+            "cos": 0
+        },
+        {
+            "log": 0
+        },
+        {
+            "exp": 1
+        }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "maximum_likelihood",
+        "question": "Which of the following is true for a very high value for P(all)?",
+        "choices": [
+        {
+            "The model classifies most blue points correctly": 0
+        },
+        {
+            "The model classifies most red points correctly": 0
+        },
+        {
+            "The model classifies most points correctly with P(all) indicating how accurate the model is": 1
+        },
+        {
+            "The model classifies all points correctly": 0
+        }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "product_to_sum",
+        "question": "What function turns products into sums?",
+        "choices": [
+        {
+            "sin": 0
+        },
+        {
+            "cos": 0
+        },
+        {
+            "log": 1
+        },
+        {
+            "exp": 0
+        }
+        ]
+    },
+    {
+        "id": 6,
+        "name": "cross_entropy",
+        "question": "Given that we have formula for two classes and m classes, these formulae look different. But for m = 2, are they same?",
+        "choices": [
+        {
+            "Yes": 1
+        },
+        {
+            "No": 0
+        }
+        ]
+    },
+    {
+        "id": 7,
+        "name": "cross_entropy_probability_relation",
+        "question": "Based on what we have covered till now, which of the following is true?",
+        "choices": [
+        {
+            "A higher cross-entropy implies a lower probability for an event": 1
+        },
+        {
+            "A higher cross-entropy implies a higher probability for an event": 0
+        },
+        {
+            "There is no relation between the cross-entropy and the probability of an event": 0
+        }
+        ]
+    },
+    {
+        "id": 8,
+        "name": "scalar_gradient_relation",
+        "question": "The gradient is actually a scalar times the coordinates of the point! And what is the scalar? Nothing less than a multiple of the difference between the label and the prediction. What does the scalar we obtained above signify? (Check all that are true.)",
+        "choices": [
+        {
+            "Closer the label to the prediction, larger the gradient.": 0
+        },
+        {
+            "Closer the label to the prediction, smaller the gradient.": 1
+        },
+        {
+            "Farther the label from the prediction, larger the gradient.": 1
+        },
+        {
+            "Farther the label to the prediction, smaller the gradient.": 0
+        }
+        ]
+    }
+  ]
+}
