@@ -1,4 +1,5 @@
 import json
+import random
 from pprint import pprint
 from ipywidgets import interact, interactive, fixed, interact_manual
 import ipywidgets as widgets
@@ -27,7 +28,7 @@ class Quiz:
         elif name != None:
             query_by, query = 'name', name
         else:
-            raise Exception('Provide "id" or "name" to show quiz')
+            raise Exception('Provide "id" or "name" to show quiz!')
         
         quiz = self.find_quiz(query_by, query)
         
@@ -59,18 +60,42 @@ class Quiz:
                 ans.append(option)
         return options, ans, len(ans) > 1
     
+    def parse_text_answer(self, correct_ans):
+        ans = correct_ans[0].strip()
+        ans = ans.split('|')
+        return ans
+    
+    def get_correct_response(self):
+        correct_responses = ['Correct!', "That's right!", 'Thanks for completing that!']
+        return random.choice(correct_responses)
+    
     def render_quiz(self, question, options, correct_ans, b_multiple_correct):
         selected_options = []
         
+        # check if text input is needed for this quiz
+        b_text_input = len(options) == 1
+        
+        if b_text_input:
+            correct_ans = self.parse_text_answer(correct_ans)
+        
         def on_submit(change):
+            if b_text_input:
+                answer = options_widget.value
+                answer = answer.strip()
+                del selected_options[:]
+                selected_options.append(answer)
             c = set(correct_ans)
             s = set(selected_options)
             if len(s) == 0:
                 print('Please choose options!')
             elif s == c:
-                print('Correct!')
+                print(self.get_correct_response())
             elif s < c:
-                print(f'{len(s)} out of {len(c)} correct! Keep trying...')
+                if b_text_input:
+                    alt = ', '.join(list(c-s))
+                    print(f"That's right!\n(Alternatively, {alt} is/are also correct!)")
+                else:
+                    print(f'{len(s)} out of {len(c)} correct! Keep trying...')
             elif s.isdisjoint(c):
                 print('Wrong answer! Please try again.')                
             else:
@@ -106,6 +131,8 @@ class Quiz:
             # add event listener
             for checkbox in checkboxes:
                 checkbox.observe(on_change_checkbox, names='value')
+        elif b_text_input:
+            options_widget = widgets.Text(placeholder='Type your answer')
         else:
             options_widget = widgets.RadioButtons(options=options, value=None, layout=layout_style)
             options_widget.observe(on_change_radiobutton, names='value')
@@ -136,6 +163,5 @@ def show_quiz(id = None, name= None):
 def main():
     # pprint(data)
     print('Not implemented yet!')
-
 if __name__ == '__main__':
     main()
