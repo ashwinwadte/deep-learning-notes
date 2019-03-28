@@ -21,6 +21,16 @@
     },
     {
         "id": 1,
+        "name": "percetron_trick",
+        "question": "If line is $3x_1 + 4x_2 - 10 = 0$ and learning rate is $0.1$, how many times would you have to apply the perceptron trick to move the line to a position where the  point $(1,1)$ is correctly classified?",
+        "choices": [
+        {
+            "10": 1
+        }
+        ]
+    },
+    {
+        "id": 2,
         "name": "conditions_for_gradient_descent",
         "question": "Which of the following conditions should be met in order to apply gradient descent? (Check all that apply.)",
         "choices": [
@@ -42,7 +52,7 @@
       ]
     },
     {
-        "id": 2,
+        "id": 3,
         "name": "perceptron_boundry",
         "question": "The sigmoid function is defined as $sigmoid(x) = \\frac{1}{(1+e^{-x})}$. If the score is defined by $4x_1 + 5x_2 - 9 = score$, then which of the following points has exactly a 50% probability of being blue or red? (Choose all that are correct.)",
         "choices": [
@@ -61,7 +71,7 @@
         ]
     },
     {
-        "id": 3,
+        "id": 4,
         "name": "convert_number_to_positive",
         "question": "What function turns every number into a positive number?",
         "choices": [
@@ -80,7 +90,7 @@
         ]
     },
     {
-        "id": 4,
+        "id": 5,
         "name": "maximum_likelihood",
         "question": "Which of the following is true for a very high value for P(all)?",
         "choices": [
@@ -99,7 +109,7 @@
         ]
     },
     {
-        "id": 5,
+        "id": 6,
         "name": "product_to_sum",
         "question": "What function turns products into sums?",
         "choices": [
@@ -118,7 +128,7 @@
         ]
     },
     {
-        "id": 6,
+        "id": 7,
         "name": "cross_entropy",
         "question": "Given that we have formula for two classes and m classes, these formulae look different. But for m = 2, are they same?",
         "choices": [
@@ -131,7 +141,7 @@
         ]
     },
     {
-        "id": 7,
+        "id": 8,
         "name": "cross_entropy_probability_relation",
         "question": "Based on what we have covered till now, which of the following is true?",
         "choices": [
@@ -147,7 +157,7 @@
         ]
     },
     {
-        "id": 8,
+        "id": 9,
         "name": "scalar_gradient_relation",
         "question": "The gradient is actually a scalar times the coordinates of the point! And what is the scalar? Nothing less than a multiple of the difference between the label and the prediction. What does the scalar we obtained above signify? (Check all that are true.)",
         "choices": [
@@ -166,7 +176,7 @@
         ]
     },
     {
-        "id": 9,
+        "id": 10,
         "name": "perceprton_weights_bias",
         "question": "Based on the learning, let's define the combination of two new perceptrons as $w_1*0.4 + w_2*0.6 + b$. Which of the following values for the weights and the bias would result in the final probability of the point to be 0.88?",
         "choices": [
@@ -182,12 +192,25 @@
         ]
     },
     {
-        "id": 10,
+        "id": 11,
         "name": "output_layer",
         "question": "How many nodes in the output layer would you require if you were trying to classify all the letters in the English alphabet?",
         "choices": [
         {
             "26|52": 1
+        }
+        ]
+    },
+    {
+        "id": 12,
+        "name": "regularization",
+        "question": "Which gives a smaller error? (Prediction: $\\hat{y} = \\sigma(w_1x_1 + w_2x_2 + b)$)",
+        "choices": [
+        {
+            "x1 + x2": 0
+        },
+        {
+            "10*x1 + 10*x2": 1
         }
         ]
     }
